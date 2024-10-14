@@ -10,8 +10,8 @@ WHERE r.id IS NULL;
 
 SELECT rt.*
 FROM Restaurant_Table rt
-LEFT JOIN Restaurant r ON rt.restaurant_id = r.id
-WHERE r.id = 1;
+JOIN Reservation r ON rt.id = r.restaurant_table_id
+WHERE rt.restaurant_id = 1;
 
 SELECT e.first_name, e.last_name, 
        ep.name AS position, 
